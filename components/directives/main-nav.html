@@ -1,0 +1,86 @@
+<aside class="sidebar">
+  <div class="panel-start" ng-if="!start && !end" layout-align="center center" layout="column">
+    <md-button class="md-raised btn-start" layout-align="center center" layout="column" ng-click="startStarter()">
+      Commencer à manger
+    </md-button>
+  </div>
+  <div class="panel-lunch-guide" ng-if="start" layout-align="center center" layout="column">
+    <div class="lunch-starter {{step}} lunch" layout-align="center center" layout="column" flex="33">
+      <span>Commencez votre entrée, une fois que vous aurez fini:</span>
+      <span>- validez si vous avez terminé.</span>
+      <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
+
+      <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="starter">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startMeal()">
+          <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
+        </md-button>
+        <md-button class="color-btn-valid md-fab" ng-if="starter" layout="row" ng-click="startMeal()">
+          <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
+        </md-button>
+      </section>
+    </div>
+    <div class="lunch-meal {{step}} lunch" layout-align="center center" layout="column" flex="33">
+      <span>Commencez votre plat, une fois que vous aurez fini:</span>
+      <span>- validez si vous avez terminé.</span>
+      <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
+
+      <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="meal">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert()">
+          <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
+        </md-button>
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert()">
+          <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
+        </md-button>
+      </section>
+    </div>
+    <div class="lunch-dessert {{step}} lunch" layout-align="center center" layout="column" flex="33">
+      <span>Commencez votre dessert, une fois que vous aurez fini:</span>
+      <span>- validez si vous avez terminé.</span>
+      <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
+
+      <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="dessert">
+        <md-button class="color-btn-valid md-fab"layout-align="center center" layout="column" ng-click="endLunch()">
+          <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
+        </md-button>
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="endLunch()">
+          <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
+        </md-button>
+      </section>
+    </div>
+  </div>
+  <div class="panel-end" ng-if="end" layout-align="center center" layout="column">
+    <span class="end-sentence">Bravo, vous avez terminé de manger!</span>
+  </div>
+</aside>
+<!-- Main navigation -->
+<!--<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+    <div id="inner-header" class="wrap container cf">
+
+        &lt;!&ndash; logo &ndash;&gt;
+        <h1 id="logo" class="text-hide h1 pull-left" itemscope itemtype="http://schema.org/Organization">
+            <a href="#/" rel="nofollow"><img src="" alt=""></a>
+        </h1>
+
+        &lt;!&ndash; hamburger icon &ndash;&gt;
+        <responsive-nav></responsive-nav>
+
+        &lt;!&ndash; nav &ndash;&gt;
+        <nav role="navigation" class="main-nav text-center" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <ul class="menu cf">
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/setup">Setup</a></li>
+                <li><a href="#/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="responsive-wrapper">
+    <ul class="cf responsive-nav option-set">
+        <li><a href="#/home">Home</a></li>&lt;!&ndash;
+        remove gap
+        &ndash;&gt;<li><a href="#/setup">Setup</a></li>&lt;!&ndash;
+        remove gap
+        &ndash;&gt;<li><a href="#/contact">Contact</a></li>
+    </ul>
+</div>-->

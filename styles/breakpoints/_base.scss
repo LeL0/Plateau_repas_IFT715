@@ -156,7 +156,6 @@ NAVIGATION STYLES
 .main-nav {
 	border-bottom: 0;
 	margin: 0;
-	display: none;
 
 	li {
 
@@ -169,6 +168,84 @@ NAVIGATION STYLES
 	}
 }
 
+/*********************
+Sidebar
+*********************/
+aside.sidebar {
+  background-color: #B3E5FC;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /*padding-top: 1.5%;
+  padding-bottom: 1.5%;*/
+}
+
+.panel-start{
+  background-color: #29B6F6;
+  width: 100%;
+  height: 100%;
+}
+
+ .panel-lunch-guide{
+   background-color: #B3E5FC;
+   width: 100%;
+   height: 100%;
+ }
+
+.lunch {
+  color: #BDBDBD;
+  width: 100%;
+  height: 100%;
+}
+
+ .lunch-starter.starter {
+   color: black;
+   font-size: 25px;
+ }
+
+.lunch-meal.meal {
+  color: black;
+  font-size: 25px;
+}
+
+.lunch-dessert.dessert {
+  color: black;
+  font-size: 25px;
+}
+
+.panel-end{
+  background-color: #29B6F6;
+  width: 100%;
+  height: 100%;
+}
+
+.end-sentence {
+  color: red;
+  font-size: 25px;
+}
+
+
+/*********************
+Plate
+*********************/
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.screen {
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
+
+.plate {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
 
 /*********************
 RESPONSIVE NAV
@@ -180,7 +257,7 @@ RESPONSIVE NAV
 	&:focus {
 		text-decoration: none;
 	}
-	
+
 	&:before {
 		content:'\2261';
 		font-size: 24px;
