@@ -4,37 +4,39 @@
   </div>
   <div class="plate" flex layout="column">
     <div class="top-plate" layout="row" flex="50">
-      <div class="void" flex="25">
+      <div class="void border-plate" layout-align="center center" layout="column" flex="25">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="main.switch()">
+          <md-icon md-svg-src="./images/curve-arrows.svg"></md-icon>
+        </md-button>
+      </div>
+      <div class="previous-meal border-plate" layout-align="center center" layout="column" flex="25">
+	      <span>{{main.previous}}</span>
+      </div>
 
+      <div class="next-meal border-plate" layout-align="center center" layout="column" flex="25">
+	      <span>{{main.next}}</span>
       </div>
-      <div class="previous-meal" layout-align="center center" layout="column" flex="25">
-	      <span>{{previous}}</span>
-      </div>
-
-      <div class="next-meal" layout-align="center center" layout="column" flex="25">
-	      <span>{{next}}</span>
-      </div>
-      <div class="drink" layout-align="center center" layout="column" flex="25">
+      <div class="drink border-plate" layout-align="center center" layout="column" flex="25">
 	      <span>Verre</span>
       </div>
     </div>
     <div class="bottom-plate" layout="row" flex="50">
       <div class="left-ustensil" layout="row" flex="25">
-        <div class="teaspoon" layout-align="center center" layout="column" flex="50">
+        <div class="teaspoon border-plate" layout-align="center center" layout="column" flex="50">
           <span>Petite cuillère</span>
         </div>
-        <div class="fork" layout-align="center center" layout="column" flex="50">
+        <div class="fork border-plate" layout-align="center center" layout="column" flex="50">
           <span>Fourchette</span>
         </div>
       </div>
-      <div class="current-meal" layout-align="center center" layout="column" flex="50">
-	      <span>{{current}}</span>
+      <div class="current-meal border-plate" layout-align="center center" layout="column" flex="50">
+	      <span>{{main.current}}</span>
       </div>
       <div class="right-ustensil" layout="row" flex="25">
-        <div class="knife" layout-align="center center" layout="column" flex="50">
+        <div class="knife border-plate" layout-align="center center" layout="column" flex="50">
           <span>Couteau</span>
         </div>
-        <div class="spoon" layout-align="center center" layout="column" flex="50">
+        <div class="spoon border-plate" layout-align="center center" layout="column" flex="50">
           <span>Cuillère</span>
         </div>
       </div>

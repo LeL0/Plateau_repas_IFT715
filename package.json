@@ -59,6 +59,7 @@
   },
   "homepage": "https://github.com/jbutko/AngularJS-Boilerplate",
   "dependencies": {
+    "gulp-cli": "^1.2.2",
     "gulp-install": "^1.1.0"
   }
 }
