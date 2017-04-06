@@ -7,32 +7,36 @@
       <div class="void" flex="25">
 
       </div>
-      <div class="previous-meal" flex="25">
-
+      <div class="previous-meal" layout-align="center center" layout="column" flex="25">
+	      <span>{{previous}}</span>
       </div>
 
-      <div class="next-meal" flex="25">
-
+      <div class="next-meal" layout-align="center center" layout="column" flex="25">
+	      <span>{{next}}</span>
       </div>
-      <div class="drink" flex="25">
-
+      <div class="drink" layout-align="center center" layout="column" flex="25">
+	      <span>Verre</span>
       </div>
     </div>
     <div class="bottom-plate" layout="row" flex="50">
-      <div class="teaspoon" flex="12.5">
-
+      <div class="left-ustensil" layout="row" flex="25">
+        <div class="teaspoon" layout-align="center center" layout="column" flex="50">
+          <span>Petite cuillère</span>
+        </div>
+        <div class="fork" layout-align="center center" layout="column" flex="50">
+          <span>Fourchette</span>
+        </div>
       </div>
-      <div class="fork" flex="12.5">
-
+      <div class="current-meal" layout-align="center center" layout="column" flex="50">
+	      <span>{{current}}</span>
       </div>
-      <div class="current-meal" flex="25">
-
-      </div>
-      <div class="knife" flex="12.5">
-
-      </div>
-      <div class="spoon" flex="12.5">
-
+      <div class="right-ustensil" layout="row" flex="25">
+        <div class="knife" layout-align="center center" layout="column" flex="50">
+          <span>Couteau</span>
+        </div>
+        <div class="spoon" layout-align="center center" layout="column" flex="50">
+          <span>Cuillère</span>
+        </div>
       </div>
     </div>
   </div>

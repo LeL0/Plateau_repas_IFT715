@@ -171,6 +171,10 @@ NAVIGATION STYLES
 /*********************
 Sidebar
 *********************/
+.side-nav{
+  height: 100%;
+}
+
 aside.sidebar {
   background-color: #B3E5FC;
   width: 100%;
@@ -200,17 +204,17 @@ aside.sidebar {
 
  .lunch-starter.starter {
    color: black;
-   font-size: 25px;
+   font-size: 20px;
  }
 
 .lunch-meal.meal {
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .lunch-dessert.dessert {
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .panel-end{
