@@ -240,7 +240,7 @@ Plate
 }
 
 .screen {
-  background-color: green;
+  background-color: red;
   width: 100%;
   height: 100%;
 }
@@ -254,6 +254,46 @@ Plate
 .border-plate{
   border: solid;
   border-color: black;
+}
+
+.cutlery{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.cutlery-text{
+  position: relative;
+  top: 50%;
+}
+
+.cutlery.red{
+  background-color: #ef9a9a;
+}
+
+.cutlery.green{
+  background-color: #A5D6A7;
+}
+
+.cutlery.yellow{
+  background-color: #FFF59D;
+}
+
+.cutlery.blue{
+  background-color: #90CAF9;
+}
+
+.cutlery.orange{
+  background-color: #FFAB91;
+}
+
+ .cutlery.purple{
+   background-color: #CE93D8;
+ }
+
+.cutlery.brown{
+  background-color: #BCAAA4;
 }
 
 /*********************

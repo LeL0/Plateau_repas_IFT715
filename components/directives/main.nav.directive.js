@@ -13,9 +13,9 @@
    */
   angular
     .module('boilerplate')
-    .directive('mainNav', tinMainNav);
+    .directive('mainNav', ['$rootScope', tinMainNav]);
 
-  function tinMainNav() {
+  function tinMainNav($rootScope) {
 
     // Definition of directive
     var directiveDefinitionObject = {
@@ -25,31 +25,54 @@
         selected: "="
       },
       link: function (scope) {
+        //$rootScope.test;
         scope.start = false;
-        scope.end = false;
+        $rootScope.end = false;
+        $rootScope.switchMeal = 0;
+        $rootScope.turnPlate = {name:"", label:""}
+
+        $rootScope.$watch('turnPlate', function(){
+          if ($rootScope.turnPlate.label.indexOf("e")!=-1){
+            scope.startStarter();
+          } else if ($rootScope.turnPlate.label.indexOf("p")!=-1){
+            scope.startMeal();
+          } else if ($rootScope.turnPlate.label.indexOf("d")!=-1){
+            scope.startDessert();
+          }
+        });
+
+        scope.incrementSwitch = function (){
+          $rootScope.switchMeal++;
+        }
 
         scope.startStarter = function () {
           scope.start = true;
           scope.starter = true;
+          scope.meal = false;
+          scope.dessert = false;
           scope.step = "starter";
         }
 
         scope.startMeal = function () {
           scope.starter = false;
           scope.meal = true;
+          scope.dessert = false;
           scope.step = "meal";
         }
 
         scope.startDessert = function () {
+          scope.starter = false;
           scope.meal = false;
           scope.dessert = true;
           scope.step = "dessert";
         }
 
         scope.endLunch = function () {
+          scope.starter = false;
+          scope.meal = false;
           scope.dessert = false;
           scope.start = false;
-          scope.end = true;
+          $rootScope.end = true;
         }
       }
     };

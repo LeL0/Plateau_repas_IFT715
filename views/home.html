@@ -5,39 +5,44 @@
   <div class="plate" flex layout="column">
     <div class="top-plate" layout="row" flex="50">
       <div class="void border-plate" layout-align="center center" layout="column" flex="25">
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="main.switch()">
-          <md-icon md-svg-src="./images/curve-arrows.svg"></md-icon>
-        </md-button>
+        <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap>
+          <md-button class="color-btn-valid md-fab" layout-align="center center" ng-disabled="main.disableNext || $root.end" layout="column" ng-click="main.clickNext()">
+            <md-icon md-svg-src="./images/turn-right-arrow.svg"></md-icon>
+          </md-button>
+          <md-button class="color-btn-valid md-fab" layout-align="center center" ng-disabled="main.disablePrevious || $root.end" layout="column" ng-click="main.clickPrevious()">
+            <md-icon md-svg-src="./images/turn-left-arrow.svg"></md-icon>
+          </md-button>
+        </section>
       </div>
       <div class="previous-meal border-plate" layout-align="center center" layout="column" flex="25">
-	      <span>{{main.previous}}</span>
+	      <span>{{main.previous.name}}</span>
       </div>
 
       <div class="next-meal border-plate" layout-align="center center" layout="column" flex="25">
-	      <span>{{main.next}}</span>
+	      <span>{{main.next.name}}</span>
       </div>
       <div class="drink border-plate" layout-align="center center" layout="column" flex="25">
 	      <span>Verre</span>
       </div>
     </div>
     <div class="bottom-plate" layout="row" flex="50">
-      <div class="left-ustensil" layout="row" flex="25">
-        <div class="teaspoon border-plate" layout-align="center center" layout="column" flex="50">
-          <span>Petite cuillère</span>
+      <div class="left-cutlery" layout="row" flex="25">
+        <div class="teaspoon border-plate cutlery {{main.colorTeaspoon}}">
+          <span class="cutlery-text">Petite cuillère</span>
         </div>
-        <div class="fork border-plate" layout-align="center center" layout="column" flex="50">
-          <span>Fourchette</span>
+        <div class="fork border-plate cutlery {{main.colorFork}}">
+          <span class="cutlery-text">Fourchette</span>
         </div>
       </div>
-      <div class="current-meal border-plate" layout-align="center center" layout="column" flex="50">
-	      <span>{{main.current}}</span>
+      <div class="current-meal border-plate cutlery {{main.colorCurrent}}" flex="50">
+	      <span class="cutlery-text">{{main.current.name}}</span>
       </div>
-      <div class="right-ustensil" layout="row" flex="25">
-        <div class="knife border-plate" layout-align="center center" layout="column" flex="50">
-          <span>Couteau</span>
+      <div class="right-cutlery" layout="row" flex="25">
+        <div class="knife border-plate cutlery {{main.colorKnife}}">
+          <span class="cutlery-text">Couteau</span>
         </div>
-        <div class="spoon border-plate" layout-align="center center" layout="column" flex="50">
-          <span>Cuillère</span>
+        <div class="spoon border-plate cutlery {{main.colorSpoon}}">
+          <span class="cutlery-text">Cuillère</span>
         </div>
       </div>
     </div>

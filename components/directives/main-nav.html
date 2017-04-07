@@ -1,6 +1,6 @@
 <aside class="sidebar">
-  <div class="panel-start" ng-if="!start && !end" layout-align="center center" layout="column">
-    <md-button class="md-raised btn-start" layout-align="center center" layout="column" ng-click="startStarter()">
+  <div class="panel-start" ng-if="!start && !$root.end" layout-align="center center" layout="column">
+    <md-button class="md-raised btn-start" layout-align="center center" layout="column" ng-click="startStarter(); incrementSwitch()">
       Commencer à manger
     </md-button>
   </div>
@@ -11,10 +11,10 @@
       <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
 
       <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="starter">
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startMeal()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startMeal(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
         </md-button>
-        <md-button class="color-btn-valid md-fab" ng-if="starter" layout="row" ng-click="startMeal()">
+        <md-button class="color-btn-valid md-fab" ng-if="starter" layout="row" ng-click="startMeal(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
         </md-button>
       </section>
@@ -25,10 +25,10 @@
       <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
 
       <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="meal">
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
         </md-button>
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
         </md-button>
       </section>
@@ -48,7 +48,7 @@
       </section>
     </div>
   </div>
-  <div class="panel-end" ng-if="end" layout-align="center center" layout="column">
+  <div class="panel-end" ng-if="$root.end" layout-align="center center" layout="column">
     <span class="end-sentence">Bravo, vous avez terminé de manger!</span>
   </div>
 </aside>
