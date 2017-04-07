@@ -1,6 +1,6 @@
 <div class="container" layout="column">
   <div class="screen" flex="20">
-
+    {{main.msgToSend}}
   </div>
   <div class="plate" flex layout="column">
     <div class="top-plate" layout="row" flex="50">
@@ -14,36 +14,35 @@
           </md-button>
         </section>
       </div>
-      <div class="previous-meal border-plate" layout-align="center center" layout="column" flex="25">
+      <md-button class="previous-meal border-plate" layout-align="center center" layout="column" flex="25" ng-click="main.clickPreviousMeal()">
 	      <span>{{main.previous.name}}</span>
-      </div>
-
-      <div class="next-meal border-plate" layout-align="center center" layout="column" flex="25">
+      </md-button>
+      <md-button class="next-meal border-plate" layout-align="center center" layout="column" flex="25" ng-click="main.clickNextMeal()">
 	      <span>{{main.next.name}}</span>
-      </div>
-      <div class="drink border-plate" layout-align="center center" layout="column" flex="25">
+      </md-button>
+      <md-button class="drink border-plate" layout-align="center center" layout="column" flex="25" ng-click="main.clickGlass()">
 	      <span>Verre</span>
-      </div>
+      </md-button>
     </div>
     <div class="bottom-plate" layout="row" flex="50">
       <div class="left-cutlery" layout="row" flex="25">
-        <div class="teaspoon border-plate cutlery {{main.colorTeaspoon}}">
+        <md-button class="teaspoon border-plate cutlery {{main.colorTeaspoon}}" ng-click="main.clickTeaspoon()">
           <span class="cutlery-text">Petite cuillère</span>
-        </div>
-        <div class="fork border-plate cutlery {{main.colorFork}}">
+        </md-button>
+        <md-button class="fork border-plate cutlery {{main.colorFork}}" ng-click="main.clickFork()">
           <span class="cutlery-text">Fourchette</span>
-        </div>
+        </md-button>
       </div>
-      <div class="current-meal border-plate cutlery {{main.colorCurrent}}" flex="50">
+      <md-button class="current-meal border-plate cutlery {{main.colorCurrent}}" flex="50" ng-click="main.clickCurrentMeal()">
 	      <span class="cutlery-text">{{main.current.name}}</span>
-      </div>
+      </md-button>
       <div class="right-cutlery" layout="row" flex="25">
-        <div class="knife border-plate cutlery {{main.colorKnife}}">
+        <md-button class="knife border-plate cutlery {{main.colorKnife}}" ng-click="main.clickKnife()">
           <span class="cutlery-text">Couteau</span>
-        </div>
-        <div class="spoon border-plate cutlery {{main.colorSpoon}}">
+        </md-button>
+        <md-button class="spoon border-plate cutlery {{main.colorSpoon}}" ng-click="main.clickSpoon()">
           <span class="cutlery-text">Cuillère</span>
-        </div>
+        </md-button>
       </div>
     </div>
   </div>

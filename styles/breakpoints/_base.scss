@@ -254,6 +254,7 @@ Plate
 .border-plate{
   border: solid;
   border-color: black;
+  margin: 0%;
 }
 
 .cutlery{
@@ -266,6 +267,10 @@ Plate
 .cutlery-text{
   position: relative;
   top: 50%;
+}
+
+.cutlery.white{
+  background-color: white;
 }
 
 .cutlery.red{
