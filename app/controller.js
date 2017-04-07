@@ -11,10 +11,10 @@
     .module('boilerplate')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['LocalStorage', 'QueryService', '$rootScope'];
+  MainController.$inject = ['LocalStorage', 'QueryService', '$rootScope', '$timeout'];
 
 
-  function MainController(LocalStorage, QueryService, $rootScope) {
+  function MainController(LocalStorage, QueryService, $rootScope, $timeout) {
 
     // 'controller as' syntax
     var self = this;
@@ -43,15 +43,20 @@
         self.colorTeaspoon = "orange";
         self.colorCurrent = "brown";
       }
+      $timeout(function(){
+        initColor();
+      }, 30000);
     });
 
     self.clickNext = function(){
       $rootScope.turnPlate = self.next;
+      initColor();
       self.switchNext();
     }
 
     self.clickPrevious = function(){
       $rootScope.turnPlate = self.previous;
+      initColor();
       self.switchPrevious();
     }
 
