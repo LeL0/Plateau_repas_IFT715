@@ -11,10 +11,10 @@
       <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
 
       <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="starter">
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startMeal(); incrementSwitch()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-disabled="$root.disableNext" ng-click="startMeal(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
         </md-button>
-        <md-button class="color-btn-valid md-fab" ng-if="starter" layout="row" ng-click="startMeal(); incrementSwitch()">
+        <md-button class="color-btn-valid md-fab" ng-if="starter" layout="row" ng-disabled="!$root.disableNext" ng-click="startMeal(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
         </md-button>
       </section>
@@ -25,10 +25,10 @@
       <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
 
       <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="meal">
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert(); incrementSwitch()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-disabled="$root.disableNext" ng-click="startDessert(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
         </md-button>
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="startDessert(); incrementSwitch()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-disabled="!$root.disableNext" ng-click="startDessert(); incrementSwitch()">
           <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
         </md-button>
       </section>
@@ -39,10 +39,10 @@
       <span>- sinon appuyez sur la croix si vous n'avez pas réussi à finir.</span>
 
       <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap ng-if="dessert">
-        <md-button class="color-btn-valid md-fab"layout-align="center center" layout="column" ng-click="endLunch()">
+        <md-button class="color-btn-valid md-fab"layout-align="center center" layout="column" ng-disabled="$root.disableNext" ng-click="endLunch()">
           <md-icon md-svg-src="./images/btnValidation/check.svg"></md-icon>
         </md-button>
-        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-click="endLunch()">
+        <md-button class="color-btn-valid md-fab" layout-align="center center" layout="column" ng-disabled="!$root.disableNext" ng-click="endLunch()">
           <md-icon md-svg-src="./images/btnValidation/cross.svg"></md-icon>
         </md-button>
       </section>

@@ -32,13 +32,16 @@
         $rootScope.turnPlate = {name:"", label:""}
 
         $rootScope.$watch('turnPlate', function(){
-          if ($rootScope.turnPlate.label.indexOf("e")!=-1){
+          if ($rootScope.turnPlate.label.indexOf("end")!=-1){
+            scope.endLunch();
+          } else if ($rootScope.turnPlate.label.indexOf("e")!=-1){
             scope.startStarter();
           } else if ($rootScope.turnPlate.label.indexOf("p")!=-1){
             scope.startMeal();
           } else if ($rootScope.turnPlate.label.indexOf("d")!=-1){
             scope.startDessert();
           }
+
         });
 
         scope.incrementSwitch = function (){

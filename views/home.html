@@ -3,8 +3,13 @@
     <span class="text-screen" flex="20">{{main.msgToSend}}</span>
     <md-content class="md-padding" layout-xs="column" layout="row" flex>
       <div flex-xs flex-gt-xs="50" layout="column">
-        <md-card>
-          <img ng-src="{{main.img.src}}" class="md-card-image" alt="Washed Out">
+        <md-card class="size-card">
+          <img ng-src="{{main.img.src}}" ng-if="main.firstCutlery" class="md-card-image size-img" alt="Washed Out">
+        </md-card>
+      </div>
+      <div flex-xs flex-gt-xs="50" ng-if="main.secondCutlery" layout="column">
+        <md-card class="size-card">
+          <img ng-src="{{main.img2.src}}" class="md-card-image size-img" alt="Washed Out">
         </md-card>
       </div>
     </md-content>
@@ -13,10 +18,10 @@
     <div class="top-plate" layout="row" flex="50">
       <div class="void border-plate" layout-align="center center" layout="column" flex="25">
         <section layout="row" dir="ltr" layout-sm="column" layout-align="center center" layout-wrap>
-          <md-button class="color-btn-valid md-fab" layout-align="center center" ng-disabled="main.disableNext || $root.end" layout="column" ng-click="main.clickNext()">
+          <md-button class="color-btn-valid md-fab" layout-align="center center" ng-disabled="$root.disableNext || $root.end" layout="column" ng-click="main.clickNext()">
             <md-icon md-svg-src="./images/turn-right-arrow.svg"></md-icon>
           </md-button>
-          <md-button class="color-btn-valid md-fab" layout-align="center center" ng-disabled="main.disablePrevious || $root.end" layout="column" ng-click="main.clickPrevious()">
+          <md-button class="color-btn-valid md-fab" layout-align="center center" ng-disabled="$root.disablePrevious || $root.end" layout="column" ng-click="main.clickPrevious()">
             <md-icon md-svg-src="./images/turn-left-arrow.svg"></md-icon>
           </md-button>
         </section>
